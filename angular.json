@@ -118,6 +118,10 @@
               "devServerTarget": "game-tools:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

@@ -1,7 +1,6 @@
 <div class="container-fluid text-center mt-2">
   <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
+    <div class="col col-6-lg">
       <h2>Star Citizen Mining Calculator</h2>
 
       <form (ngSubmit)="onSubmit()" #calcForm="ngForm">
@@ -129,6 +128,5 @@
       <h2 class="mt-2" *ngIf="totalValue != null">Max Node Value: {{ totalValue }} UEC</h2>
       <h2 class="mt-2" *ngIf="totalValue == null">Your value will display here</h2>
     </div>
-    <div class="col-4"></div>
   </div>
 </div>
