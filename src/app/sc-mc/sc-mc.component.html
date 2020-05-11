@@ -4,129 +4,130 @@
     <div class="col-4">
       <h2>Star Citizen Mining Calculator</h2>
 
-      <form action="">
+      <form (ngSubmit)="onSubmit()" #calcForm="ngForm">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Total Mass</span>
           </div>
-          <input type="number" step="any" class="form-control" placeholder="Total Mass" aria-label="Mass"
-            aria-describedby="basic-addon1">
+          <input type="number" step="any" class="form-control" [(ngModel)]="model.mass" name="mass"
+            placeholder="Total Mass" aria-label="Mass" aria-describedby="basic-addon1" required>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Mineral 1</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01" required>
+          <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="model.m1" name="m1" required>
             <option>Select...</option>
-            <option value="Bex">Bexalite</option>
-            <option value="Tar">Taranite</option>
-            <option value="Bor">Borase</option>
-            <option value="Lar">Laranite</option>
-            <option value="Agri">Agricium</option>
-            <option value="Heph">Hephaestanite</option>
-            <option value="Tita">Titanium</option>
-            <option value="Dia">Diamond</option>
-            <option value="Gold">Gold</option>
-            <option value="Cop">Copper</option>
-            <option value="Ber">Beryl</option>
-            <option value="Tun">Tungsten</option>
-            <option value="Cor">Corundum</option>
-            <option value="Qua">Quartz</option>
-            <option value="Alu">Aluminum</option>
+            <option value="40.5">Bexalite</option>
+            <option value="32.52">Taranite</option>
+            <option value="32.44">Borase</option>
+            <option value="30.25">Laranite</option>
+            <option value="26.88">Agricium</option>
+            <option value="14.70">Hephaestanite</option>
+            <option value="8.68">Titanium</option>
+            <option value="7.16">Diamond</option>
+            <option value="6.25">Gold</option>
+            <option value="5.77">Copper</option>
+            <option value="4.32">Beryl</option>
+            <option value="3.99">Tungsten</option>
+            <option value="2.65">Corundum</option>
+            <option value="1.51">Quartz</option>
+            <option value="1.27">Aluminum</option>
           </select>
           <div class="input-group-append">
             <span class="input-group-text">Percent</span>
           </div>
-          <input type="number" step="any" min="0" max="100" class="form-control" placeholder="Enter a percentage..."
-            aria-label="Mass" aria-describedby="basic-addon1">
+          <input type="number" step="any" min="0" max="100" class="form-control" [(ngModel)]="model.p1" name="p1"
+            placeholder="Percent..." aria-label="Mass" aria-describedby="basic-addon1" required>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Mineral 2</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" [(ngModel)]="model.m2" name="m2" id="inputGroupSelect01">
             <option>Select...</option>
-            <option value="Bex">Bexalite</option>
-            <option value="Tar">Taranite</option>
-            <option value="Bor">Borase</option>
-            <option value="Lar">Laranite</option>
-            <option value="Agri">Agricium</option>
-            <option value="Heph">Hephaestanite</option>
-            <option value="Tita">Titanium</option>
-            <option value="Dia">Diamond</option>
-            <option value="Gold">Gold</option>
-            <option value="Cop">Copper</option>
-            <option value="Ber">Beryl</option>
-            <option value="Tun">Tungsten</option>
-            <option value="Cor">Corundum</option>
-            <option value="Qua">Quartz</option>
-            <option value="Alu">Aluminum</option>
+            <option value="40.5">Bexalite</option>
+            <option value="32.52">Taranite</option>
+            <option value="32.44">Borase</option>
+            <option value="30.25">Laranite</option>
+            <option value="26.88">Agricium</option>
+            <option value="14.70">Hephaestanite</option>
+            <option value="8.68">Titanium</option>
+            <option value="7.16">Diamond</option>
+            <option value="6.25">Gold</option>
+            <option value="5.77">Copper</option>
+            <option value="4.32">Beryl</option>
+            <option value="3.99">Tungsten</option>
+            <option value="2.65">Corundum</option>
+            <option value="1.51">Quartz</option>
+            <option value="1.27">Aluminum</option>
           </select>
           <div class="input-group-append">
             <span class="input-group-text">Percent</span>
           </div>
-          <input type="number" step="any" min="0" max="100" class="form-control" placeholder="Enter a percentage..."
-            aria-label="Mass" aria-describedby="basic-addon1">
+          <input type="number" step="any" min="0" max="100" class="form-control" [(ngModel)]="model.p2" name="p2"
+            placeholder="Percent..." aria-label="Mass" aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Mineral 3</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" [(ngModel)]="model.m3" name="m3" id="inputGroupSelect01">
             <option>Select...</option>
-            <option value="Bex">Bexalite</option>
-            <option value="Tar">Taranite</option>
-            <option value="Bor">Borase</option>
-            <option value="Lar">Laranite</option>
-            <option value="Agri">Agricium</option>
-            <option value="Heph">Hephaestanite</option>
-            <option value="Tita">Titanium</option>
-            <option value="Dia">Diamond</option>
-            <option value="Gold">Gold</option>
-            <option value="Cop">Copper</option>
-            <option value="Ber">Beryl</option>
-            <option value="Tun">Tungsten</option>
-            <option value="Cor">Corundum</option>
-            <option value="Qua">Quartz</option>
-            <option value="Alu">Aluminum</option>
+            <option value="40.5">Bexalite</option>
+            <option value="32.52">Taranite</option>
+            <option value="32.44">Borase</option>
+            <option value="30.25">Laranite</option>
+            <option value="26.88">Agricium</option>
+            <option value="14.70">Hephaestanite</option>
+            <option value="8.68">Titanium</option>
+            <option value="7.16">Diamond</option>
+            <option value="6.25">Gold</option>
+            <option value="5.77">Copper</option>
+            <option value="4.32">Beryl</option>
+            <option value="3.99">Tungsten</option>
+            <option value="2.65">Corundum</option>
+            <option value="1.51">Quartz</option>
+            <option value="1.27">Aluminum</option>
           </select>
           <div class="input-group-append">
             <span class="input-group-text">Percent</span>
           </div>
-          <input type="number" step="any" min="0" max="100" class="form-control" placeholder="Enter a percentage..."
-            aria-label="Mass" aria-describedby="basic-addon1">
+          <input type="number" step="any" min="0" max="100" class="form-control" [(ngModel)]="model.p3" name="p3"
+            placeholder="Percent..." aria-label="Mass" aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Mineral 4</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" [(ngModel)]="model.m4" name="m4" id="inputGroupSelect01">
             <option>Select...</option>
-            <option value="Bex">Bexalite</option>
-            <option value="Tar">Taranite</option>
-            <option value="Bor">Borase</option>
-            <option value="Lar">Laranite</option>
-            <option value="Agri">Agricium</option>
-            <option value="Heph">Hephaestanite</option>
-            <option value="Tita">Titanium</option>
-            <option value="Dia">Diamond</option>
-            <option value="Gold">Gold</option>
-            <option value="Cop">Copper</option>
-            <option value="Ber">Beryl</option>
-            <option value="Tun">Tungsten</option>
-            <option value="Cor">Corundum</option>
-            <option value="Qua">Quartz</option>
-            <option value="Alu">Aluminum</option>
+            <option value="40.5">Bexalite</option>
+            <option value="32.52">Taranite</option>
+            <option value="32.44">Borase</option>
+            <option value="30.25">Laranite</option>
+            <option value="26.88">Agricium</option>
+            <option value="14.70">Hephaestanite</option>
+            <option value="8.68">Titanium</option>
+            <option value="7.16">Diamond</option>
+            <option value="6.25">Gold</option>
+            <option value="5.77">Copper</option>
+            <option value="4.32">Beryl</option>
+            <option value="3.99">Tungsten</option>
+            <option value="2.65">Corundum</option>
+            <option value="1.51">Quartz</option>
+            <option value="1.27">Aluminum</option>
           </select>
           <div class="input-group-append">
             <span class="input-group-text">Percent</span>
           </div>
-          <input type="number" step="any" min="0" max="100" class="form-control" placeholder="Enter a percentage..."
-            aria-label="Mass" aria-describedby="basic-addon1">
+          <input type="number" step="any" min="0" max="100" class="form-control" [(ngModel)]="model.p4" name="p4"
+            placeholder="Percent..." aria-label="Mass" aria-describedby="basic-addon1">
         </div>
-        <button class="btn btn-info" type="submit">Calculate</button>
+        <button class="btn btn-info" type="submit" [disabled]="!calcForm.form.valid">Calculate</button>
       </form>
-
+      <h2 class="mt-2" *ngIf="totalValue != null">Max Node Value: {{ totalValue }} UEC</h2>
+      <h2 class="mt-2" *ngIf="totalValue == null">Your value will display here</h2>
     </div>
     <div class="col-4"></div>
   </div>
